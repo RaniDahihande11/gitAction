@@ -1,0 +1,18 @@
+# name of the workflow
+name: github action demo pipeline
+
+on:
+    push:
+        branches:
+            -main
+
+jobs:
+    demo-job:
+        runs-on: ubuntu-latest    
+        
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v2
+        
+            - name: print message
+              run: echo "welcome to github actions
